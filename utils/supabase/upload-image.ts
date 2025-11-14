@@ -8,7 +8,7 @@ export const uploadImage = async (image: File) => {
     const path:string = `${imageName[0]}-${uuid()}.${imageName[1]}`
 
     const {data, error} = await supabase.storage.from('image')
-                                                .upload(path, image)
+                                        .upload(path, image)
 
     if(error) throw error
 

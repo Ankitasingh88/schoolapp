@@ -5,16 +5,15 @@ import SearchInput from "../Search"
 const Header = () => {
     return (
         <>
-         <header className="flex justify-between items-centre flex-wrap">
+         <header className="card px-8 py-4 mb-8 animate-fadeIn">
+            <div className= "flex justify-between items-center flex-wrap gap-4 max-w-7xl mx-auto" >
             <Logo />
             <SearchInput/>
             <AccountLinks />        
-         </header>
-         <div className="mt-4 w-[95%] border-b-4 flex-8/12"></div>
+           </div>
+        </header>
          </>
     )
 }
 
 export default Header
-
-

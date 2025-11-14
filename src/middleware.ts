@@ -1,9 +1,7 @@
 import { createServerClient } from "@supabase/ssr/"
 import { NextRequest, NextResponse} from "next/server";
 
-//export const middleware = async (request: NextRequest) => {
-
-    export async function middleware(request: NextRequest) {
+export async function middleware(request: NextRequest) {
     const supabaseResponse = NextResponse.next({request});
 
     const supabase = createServerClient(

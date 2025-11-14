@@ -22,7 +22,7 @@ const SearchInput = () => {
 
     console.log('search results: ',data)
 
-    const handleChange = (e: { target: { value: SetStateAction<string>; } }) => {
+    const handleChange = (e: { target: { value: SetStateAction<string>; }; }) => {
         setUserInput(e.target.value)
     }
 
@@ -36,7 +36,7 @@ const SearchInput = () => {
 
     {data &&  
      <div  onClick={()=> setUserInput('')} className="border absolute bg-white p-2 rounded-xl">
-        {data.map(({ title, slug }) => <Link className="block"   key={slug} href={`/${slug}`}>{title}</Link> )}
+        {data.map(({ title, slug }) => <Link className="block" key={slug} href={`/${slug}`}>{title}</Link> )}
      </div>
     }
     </div>
